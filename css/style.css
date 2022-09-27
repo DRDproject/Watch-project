@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color:cornflowerblue;
+}
+h1{
+    color: white;
+    text-align: center;
+    font-size: 5rem;
+    margin-top: 1rem;
+}
+.mainBox{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainBox .watch{
+    height: 40rem;
+    width: 40rem;
+    background-color:rgba(255, 255, 255, .8);
+    border: .2rem solid gold;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 .8rem black;
+}
+
+.watch::before{
+    content: '';
+    position: absolute;
+    background-color: rgba(0,0,0,0.1);
+    z-index: 11;
+    width: 34rem;
+    height: 34rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%; }
+
+.watch::after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    z-index: 11;
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%; }
+
+.watch .h3_text{
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    font-size: 1.8rem;
+}
+.mainBox .watch .number{
+    --rotation:0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* background-color: aqua; */
+    font-size: 2.5rem;
+    font-weight:600;
+    text-align: center;
+    transform: rotate(var(--rotation));
+}
+
+.mainBox .watch .number1{ --rotation:30deg; }
+.mainBox .watch .number2{ --rotation:60deg; }
+.mainBox .watch .number3{ --rotation:90deg; }
+.mainBox .watch .number4{ --rotation:120deg; }
+.mainBox .watch .number5{ --rotation:150deg; }
+.mainBox .watch .number6{ --rotation:180deg; }
+.mainBox .watch .number7{ --rotation:210deg; }
+.mainBox .watch .number8{ --rotation:240deg; }
+.mainBox .watch .number9{ --rotation:270deg; }
+.mainBox .watch .number10{ --rotation:300deg; }
+.mainBox .watch .number11{ --rotation:330deg; }
+.mainBox .watch .number12{ --rotation:360deg; }
+.mainBox .watch .number span{
+    transform: rotate(60deg);
+}
+
+.watch .hand{
+    --rotation:0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border: .1rem solid white;
+    border-top-left-radius:1rem ;
+    border-top-right-radius:1rem ;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+.watch .hand.second{
+    width: .5rem;
+    height: 42%;
+    background-color: red;
+}
+.watch .hand.minute{
+    width: .8rem;
+    height: 39%;
+    background-color: black;
+}
+.watch .hand.hour{
+    width: 1.2rem;
+    height: 34%;
+    background-color: green;
+}
+ /*MEDIA @ QUERY*/
+
+ @media (max-width: 575.98px) { 
+    .mainBox{
+      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color:brown; */
+    }
+    
+      }
+
+
+
